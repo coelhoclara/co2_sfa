@@ -96,7 +96,7 @@ dataforMCPI_tofile$kt <- dataforMCPI_tofile$k*dataforMCPI_tofile$t
 # dataforMCPI_tofile$ytilda <- dataforMCPI_tofile$yt*dataforMCPI_tofile$ttilda
 
 
-
+dataforMCPI_tofile$cminus <- dataforMCPI_tofile$c*-1
 
 saveRDS(dataforMCPI_tofile,"dataforMCPI_tofile_new.RDS")
 
@@ -104,6 +104,6 @@ write.table(dataforMCPI_tofile,"dataforMCPI.raw", sep=" ", quote = FALSE, row.na
 
 
 #select only one country and write
-#Brazil = 25
-dataforMCPI_tofile <- dataforMCPI_tofile %>% filter(countryid==25)
-write.table(dataforMCPI_tofile,"dataforMCPI_bra.raw", sep=" ", quote = FALSE, row.names = FALSE)                      
+
+dataforMCPI_tofile <- dataforMCPI_tofile %>% filter(year<=2013)
+write.table(dataforMCPI_tofile,"dataforMCPI_short.raw", sep=" ", quote = FALSE, row.names = FALSE)                      
