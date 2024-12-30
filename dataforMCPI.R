@@ -95,6 +95,19 @@ dataforMCPI_tofile$kt <- dataforMCPI_tofile$k*dataforMCPI_tofile$t
 # dataforMCPI_tofile$ltilda <- dataforMCPI_tofile$lt*dataforMCPI_tofile$ttilda
 # dataforMCPI_tofile$ytilda <- dataforMCPI_tofile$yt*dataforMCPI_tofile$ttilda
 
+dataforMCPI_tofile$log_C <- log(dataforMCPI_tofile$c_rscale)
+dataforMCPI_tofile$log_Y <- log(dataforMCPI_tofile$y_rscale)
+dataforMCPI_tofile$log_K <- log(dataforMCPI_tofile$k_rscale)
+dataforMCPI_tofile$log_L <- log(dataforMCPI_tofile$l_rscale)
+dataforMCPI_tofile$log_L2 <- 0.5*dataforMCPI_tofile$log_L^2
+dataforMCPI_tofile$log_Y2 <- 0.5*dataforMCPI_tofile$log_Y^2
+dataforMCPI_tofile$log_K2 <- 0.5*dataforMCPI_tofile$log_K^2
+dataforMCPI_tofile$log_L_log_Y <- dataforMCPI_tofile$log_L*dataforMCPI_tofile$log_Y
+dataforMCPI_tofile$log_L_log_K <- dataforMCPI_tofile$log_L*dataforMCPI_tofile$log_K
+dataforMCPI_tofile$log_L_t <- dataforMCPI_tofile$log_L*dataforMCPI_tofile$t
+dataforMCPI_tofile$log_Y_log_K <- dataforMCPI_tofile$log_Y*dataforMCPI_tofile$log_K
+dataforMCPI_tofile$log_Y_t <- dataforMCPI_tofile$log_Y*dataforMCPI_tofile$t
+dataforMCPI_tofile$log_K_t <- dataforMCPI_tofile$log_K*dataforMCPI_tofile$t
 
 dataforMCPI_tofile$cminus <- dataforMCPI_tofile$c*-1
 
